@@ -9,7 +9,7 @@ const errorHandler = (err, req, res, next) => {
     let errdata = {
         mes: "internal server error...!",
 
-        ...(DEBUG_MODE = 'true' && { originalError: err.message })
+        ...(DEBUG_MODE === true && { originalError: err.message })
 
     }
 
@@ -21,7 +21,7 @@ const errorHandler = (err, req, res, next) => {
     }
 
     if (err instanceof CustomeErrorHandler) {
-        statusCode = err.status;
+        statuscode = err.status;
         errdata = {
             mess: err.message
         }

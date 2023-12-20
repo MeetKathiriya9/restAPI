@@ -4,9 +4,8 @@ import router from './Router/router.js';
 import errorHandler from './Middleware/errorHandler.js';
 import mongoose from 'mongoose';
 
-mongoose.set('strictQuery',false);
+mongoose.set('strictQuery', false);
 mongoose.connect(DB_URL, {useNewUrlParser: true});
-
 
 const app = express();
 
